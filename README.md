@@ -39,3 +39,6 @@
 - THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 
 ## Resources
+- https://www.npmjs.com/package/mongoose 
+- https://www.npmjs.com/package/bcrypt 
+- https://www.npmjs.com/package/jsonwebtoken 
