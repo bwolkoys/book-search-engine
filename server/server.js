@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware, // Use the updated auth middleware
+  context: authMiddleware, // updated auth middleware
 });
 
 server.applyMiddleware({ app });
