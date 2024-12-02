@@ -1,6 +1,7 @@
 # Book Search Engine Starter Code
 
 ## Description 
+- This application allows you to search new books to read. There is a sign up and login functionality where you can search books, view saves books and logout. When searching books, the results will show title, author, description, image and link to the book. Enjoy!
 
 ## User Story
 - AS AN avid reader
@@ -43,7 +44,8 @@
 - https://www.npmjs.com/package/bcrypt 
 - https://www.npmjs.com/package/jsonwebtoken 
 - https://www.npmjs.com/package/@apollo/react-hooks 
+- signup form: help from Chat gpt (inside the try, catch) to try and solve the error in the console 
 
 ## Troubleshooting
-- Have rearranged my code 5 times and cannot figure out why this is happening in the console. Screenshot below. I did the best I could but don't have anymore time to work on this. 
+- Have rearranged my code 5 times and cannot figure out why this is happening in the console. Screenshot below. I did the best I could but don't have anymore time to work on this. Please let me know if you find what is wrong in my code. Thank you!
 ![Screenshot 2024-12-02 at 12 00 37 PM](https://github.com/user-attachments/assets/2c6b2a4a-1290-4249-b0dc-485792256b9b)
