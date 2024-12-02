@@ -49,3 +49,8 @@
 ## Troubleshooting
 - Have rearranged my code 5 times and cannot figure out why this is happening in the console. Screenshot below. I did the best I could but don't have anymore time to work on this. Please let me know if you find what is wrong in my code. Thank you!
 ![Screenshot 2024-12-02 at 12 00 37 PM](https://github.com/user-attachments/assets/2c6b2a4a-1290-4249-b0dc-485792256b9b)
+- Struggling to get this uploaded to render
+![Screenshot 2024-12-02 at 1 34 23 PM](https://github.com/user-attachments/assets/6b55b795-332d-48fc-be01-1db2dcca298f)
+
+## Link to Non-deployed application
+- https://book-search-engine-zhtd.onrender.com 
