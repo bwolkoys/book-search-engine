@@ -19,12 +19,14 @@ const server = new ApolloServer({
   context: authMiddleware, // updated auth middleware
 });
 
-//server.applyMiddleware({ app });
+server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if we're in production, serve client/build as static assets
+const _dirname = path.dirname("");
+const buildPath = path.join(_dirname, "../client/build");
+app.use(express.static(buildPath));
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
@@ -37,7 +39,7 @@ app.get('/', (req, res) => {
 app.use(routes);
 
 db.once('open', () => {
-  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Now listening on localhost:${PORT}`));
 });
 
 app.get('/', (req, res) => {
