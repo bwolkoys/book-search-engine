@@ -42,3 +42,8 @@
 - https://www.npmjs.com/package/mongoose 
 - https://www.npmjs.com/package/bcrypt 
 - https://www.npmjs.com/package/jsonwebtoken 
+- https://www.npmjs.com/package/@apollo/react-hooks 
+
+## Troubleshooting
+- Have rearranged my code 5 times and cannot figure out why this is happening in the console. Screenshot below. I did the best I could but don't have anymore time to work on this. 
+![Screenshot 2024-12-02 at 12 00 37 PM](https://github.com/user-attachments/assets/2c6b2a4a-1290-4249-b0dc-485792256b9b)

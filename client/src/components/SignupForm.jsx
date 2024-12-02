@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-import { createUser } from '../utils/API';
+//import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
 
 import { ADD_USER } from '../utils/mutations';
-import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/react-hooks';
+
 
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   // set state for form validation
-  const [validated] = useState(false);
+  const [validated, setValidated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
@@ -29,32 +30,49 @@ const SignupForm = () => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
+    // const form = event.currentTarget;
+    // if (form.checkValidity() === false) {
+    //   event.preventDefault();
+    //   event.stopPropagation();
+    // }
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  if (!form.checkValidity()) {
+    event.stopPropagation();
+    event.stopPropagation();
+    //return;
+  }
+  //setValidated(true);
+
 
     try {
-      // destructuring response from addUser mutation
-      const { data } = await addUser({
-        //variables below
-          variables: { username, email, password },
-      });
 
-      const { token, user } = await response.json();
-      console.log(user);
-      Auth.login(token);
+      // destructuring response from addUser mutation
+      //let {username, email, password} = userFormData
+      // const { data } = await addUser({
+      //   //variables below
+      //     variables: { username, email, password },
+      // });
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
+  
+    
+
+      //onst { token, user } = await response.json();
+      //const { token, user } = data.addUser;
+      //console.log(user);
+      //Auth.login(token);
+      Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);
     }
 
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
+      setUserFormData({
+        username: '',
+        email: '',
+        password: '',
+      });
   };
 
   return (
