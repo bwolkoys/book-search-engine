@@ -13,6 +13,11 @@ const { typeDefs, resolvers } = require('./schemas');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+//taken from chat gpt due to render error
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+});
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
